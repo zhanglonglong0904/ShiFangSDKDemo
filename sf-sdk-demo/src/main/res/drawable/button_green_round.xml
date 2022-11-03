@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 圆角按钮定义 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_C9E5CC"/>
+
+            <!--  在按钮内部，字的前后左右与边框之间的距离 -->
+            <padding
+                android:left="5dp"
+                android:right="5dp"/>
+
+            <!-- 按钮上下左右圆角的度数 -->
+            <corners
+                android:bottomLeftRadius="5dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp"/>
+
+        </shape>
+    </item>
+
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#41D578"/>
+
+            <!--  在按钮内部，字的前后左右与边框之间的距离 -->
+            <padding
+                android:left="5dp"
+                android:right="5dp"/>
+
+            <!-- 按钮上下左右圆角的度数 -->
+            <corners
+                android:bottomLeftRadius="5dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp"/>
+
+        </shape>
+    </item>
+
+</selector>

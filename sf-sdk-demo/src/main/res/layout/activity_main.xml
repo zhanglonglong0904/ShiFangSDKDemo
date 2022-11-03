@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/mr_white_EE"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="640:480"
+        app:layout_constraintLeft_toRightOf="@id/rv_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rv_content"/>
+
+    <Button
+        android:id="@+id/btn_iden"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="识别"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:onClick="idenClick"
+        android:layout_marginTop="20dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintLeft_toLeftOf="@id/surface"
+        app:layout_constraintRight_toRightOf="@id/surface"
+        app:layout_constraintTop_toBottomOf="@id/surface"/>
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/cb_learn_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:text="学习模式"
+        android:layout_marginTop="20dp"
+        android:buttonTint="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/btn_iden"
+        app:layout_constraintRight_toRightOf="@id/btn_iden"
+        app:layout_constraintTop_toBottomOf="@id/btn_iden"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="识别结果"
+        android:textColor="@color/mr_blue"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_tips"/>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="提示：\n\t1.首次识别的商品，识别完成之后，需要点击上方商品列表中对应的商品来与本次识别关联，关联之后，下次就可以正常识别;\n\t2.识别模式下，放置商品后，直接点击商品进行学习；"
+        android:textColor="@color/mr_blue_gray"
+        android:textSize="21sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,162 @@
+[
+    {
+        "code": "6615",
+        "id": 2020,
+        "isSale": true,
+        "name": "商品1",
+        "pluNo": 6615,
+        "priceFen": 1200,
+        "priceUnit": "kg",
+        "price": 12.0
+    },
+    {
+        "code": "5981",
+        "id": 2021,
+        "isSale": true,
+        "name": "商品2",
+        "pluNo": 5981,
+        "priceFen": 3500,
+        "priceUnit": "kg",
+        "price": 35.0
+    },
+    {
+        "code": "4020",
+        "id": 2022,
+        "isSale": true,
+        "name": "商品3",
+        "pluNo": 4020,
+        "priceFen": 4000,
+        "priceUnit": "kg",
+        "price": 40.0
+    },
+    {
+        "code": "9673",
+        "id": 2023,
+        "isSale": true,
+        "name": "商品4",
+        "pluNo": 9673,
+        "priceFen": 9800,
+        "priceUnit": "kg",
+        "price": 98.0
+    },
+    {
+        "code": "9694",
+        "id": 2024,
+        "isSale": true,
+        "name": "商品5",
+        "pluNo": 9694,
+        "priceFen": 17600,
+        "priceUnit": "kg",
+        "price": 176.0
+    },
+    {
+        "code": "2542",
+        "id": 2025,
+        "isSale": true,
+        "name": "商品6",
+        "pluNo": 2542,
+        "priceFen": 4800,
+        "priceUnit": "kg",
+        "price": 48.0
+    },
+    {
+        "code": "3940",
+        "id": 2026,
+        "isSale": true,
+        "name": "商品7",
+        "pluNo": 3940,
+        "priceFen": 1100,
+        "priceUnit": "kg",
+        "price": 11.0
+    },
+    {
+        "code": "10406",
+        "id": 2028,
+        "isSale": true,
+        "name": "商品8",
+        "pluNo": 10406,
+        "priceFen": 3980,
+        "priceUnit": "kg",
+        "price": 39.8
+    },
+    {
+        "code": "9727",
+        "id": 2029,
+        "isSale": true,
+        "name": "商品9",
+        "pluNo": 9727,
+        "priceFen": 1300,
+        "priceUnit": "kg",
+        "price": 13.0
+    },
+    {
+        "code": "2697",
+        "id": 2030,
+        "isSale": true,
+        "name": "商品10",
+        "pluNo": 2697,
+        "priceFen": 3600,
+        "priceUnit": "kg",
+        "price": 36.0
+    },
+    {
+        "code": "10409",
+        "id": 2031,
+        "isSale": true,
+        "name": "商品11",
+        "pluNo": 10409,
+        "priceFen": 600,
+        "priceUnit": "kg",
+        "price": 6.0
+    },
+    {
+        "code": "9956",
+        "id": 2032,
+        "isSale": true,
+        "name": "商品12",
+        "pluNo": 9956,
+        "priceFen": 1500,
+        "priceUnit": "kg",
+        "price": 15.0
+    },
+    {
+        "code": "3934",
+        "id": 2033,
+        "isSale": true,
+        "name": "商品13",
+        "pluNo": 3934,
+        "priceFen": 500,
+        "priceUnit": "kg",
+        "price": 5.0
+    },
+    {
+        "code": "90304",
+        "id": 2036,
+        "isSale": true,
+        "name": "商品14",
+        "pluNo": 90304,
+        "priceFen": 5500,
+        "priceUnit": "kg",
+        "price": 55.0
+    },
+    {
+        "code": "9957",
+        "id": 2037,
+        "isSale": true,
+        "name": "商品15",
+        "pluNo": 9957,
+        "priceFen": 11100,
+        "priceUnit": "kg",
+        "price": 111.0
+    },
+    {
+        "code": "9341",
+        "id": 2038,
+        "isSale": true,
+        "name": "商品16",
+        "pluNo": 9341,
+        "priceFen": 1100,
+        "priceUnit": "kg",
+        "price": 11.0
+    }
+]

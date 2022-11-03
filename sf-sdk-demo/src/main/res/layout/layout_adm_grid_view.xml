@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:padding="10dp"
+    tools:context=".activity.WeightMainActivity">
+
+    <ImageView
+        android:id="@+id/lagv_iv_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/imageview_round_corner"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/lagv_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商品名称"
+        android:textSize="16sp"
+        android:textColor="@color/mr_black"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:gravity="center|center_horizontal"
+        android:layout_gravity="center"
+        app:autoSizeTextType="uniform"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/lagv_tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商品价格"
+        android:textSize="16sp"
+        android:textColor="@color/mr_red_000"
+        android:textStyle="bold"
+        android:textScaleX="1.1"
+        android:gravity="center|center_horizontal"
+        android:layout_gravity="bottom"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform"
+        android:layout_marginTop="3dp"/>
+
+
+
+</LinearLayout>

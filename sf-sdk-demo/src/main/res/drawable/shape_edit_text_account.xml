@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <!-- 【样式：一个圆角矩形，背景为 从#F00到#00F的渐变色】 -->
+    <gradient
+        android:startColor="#E5E5E5"
+        android:endColor="#E5E5E5"
+        android:angle="45"/>
+
+    <padding
+        android:right="5dp"
+        android:bottom="5dp"/>
+
+    <corners android:radius="5dp"/>
+
+</shape>

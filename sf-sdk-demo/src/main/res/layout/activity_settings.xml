@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTheme"
+    tools:context="com.shifang.demo.SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_settings_title_top_margin">
+
+        <TextView
+            android:id="@+id/top_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textColor="@color/red_btn_bg_color"
+            android:textStyle="bold"
+            android:letterSpacing="0.5"
+            android:text="[修改完选项记得点击保存]"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title_algo_param"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorTheme"
+            android:paddingHorizontal="10dp"
+            android:text="算法参数配置"
+            android:textColor="@color/settings_config_title"
+            android:textSize="@dimen/sp_settings_config_title_text"
+            android:translationZ="999dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_tips"/>
+
+        <View
+            android:id="@+id/split_recognize_threshold"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333"
+            app:layout_constraintBottom_toBottomOf="@id/title_algo_param"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_algo_param" />
+
+        <TextView
+            android:id="@+id/title_recognize_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_left_margin"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="识别阈值"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/split_recognize_threshold" />
+
+        <EditText
+            android:id="@+id/et_recognize_threshold"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_middle_margin"
+            android:paddingVertical="5dp"
+            android:gravity="center"
+            android:hint="0.01~0.99"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:maxLength="5"
+            android:text="0.05"
+            android:textColor="#666"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintBottom_toBottomOf="@id/title_recognize_threshold"
+            app:layout_constraintLeft_toRightOf="@id/title_recognize_threshold"
+            app:layout_constraintTop_toTopOf="@id/title_recognize_threshold" />
+
+        <CheckBox
+            android:id="@+id/cb_forbid_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="异常图像禁止学习"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cb_forbid_recognize"
+            app:layout_constraintTop_toBottomOf="@id/title_recognize_threshold" />
+
+        <CheckBox
+            android:id="@+id/cb_forbid_recognize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="异常图像禁止识别"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintBottom_toBottomOf="@id/cb_forbid_feedback"
+            app:layout_constraintLeft_toRightOf="@id/cb_forbid_feedback"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cb_forbid_feedback" />
+
+        <TextView
+            android:id="@+id/tv_algo_tips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:paddingHorizontal="10dp"
+            android:text="备注：异常图像指：1.商品被手、塑料袋等遮挡过多；2.手机、标签卷等被算法判定为异物的；"
+            android:textColor="#0D3"
+            android:textSize="@dimen/sp_settings_comment_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_forbid_recognize" />
+
+        <TextView
+            android:id="@+id/title_online_optimize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_settings_title_top_margin"
+            android:background="@color/colorTheme"
+            android:paddingHorizontal="10dp"
+            android:text="联网模型优化"
+            android:textColor="@color/settings_config_title"
+            android:textSize="@dimen/sp_settings_config_title_text"
+            android:translationZ="999dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_algo_tips" />
+
+        <View
+            android:id="@+id/split_online_optimize"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333"
+            app:layout_constraintBottom_toBottomOf="@id/title_online_optimize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_online_optimize" />
+
+        <CheckBox
+            android:id="@+id/cb_online_optimize_enabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_left_margin"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="开启联网优化"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/split_online_optimize" />
+
+        <TextView
+            android:id="@+id/title_online_optimize_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_left_margin"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="服务地址"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_online_optimize_enabled" />
+
+        <EditText
+            android:id="@+id/et_online_optimize_server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_middle_margin"
+            android:gravity="center"
+            android:hint="地址为空将会使用默认地址"
+            android:textColor="#666"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingVertical="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/title_online_optimize_server"
+            app:layout_constraintLeft_toRightOf="@id/title_online_optimize_server"
+            app:layout_constraintTop_toTopOf="@id/title_online_optimize_server"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tv_optimize_tips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="备注：联网优化功能在设备可以访问外网的前提下，会执行数据采集+自动推送新模型"
+            android:textColor="#0D3"
+            android:textSize="@dimen/sp_settings_comment_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_online_optimize_server" />
+
+        <TextView
+            android:id="@+id/title_online_recognize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_settings_title_top_margin"
+            android:background="@color/colorTheme"
+            android:paddingHorizontal="10dp"
+            android:text="联网识别"
+            android:textColor="@color/settings_config_title"
+            android:textSize="@dimen/sp_settings_config_title_text"
+            android:translationZ="999dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_optimize_tips" />
+
+        <View
+            android:id="@+id/split_online_reconize"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333"
+            app:layout_constraintBottom_toBottomOf="@id/title_online_recognize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_online_recognize" />
+
+        <TextView
+            android:id="@+id/title_online_reconize_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_left_margin"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text="服务地址"
+            android:textColor="@color/settings_item_label"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/split_online_reconize" />
+
+        <EditText
+            android:id="@+id/et_online_reconize_server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_settings_item_middle_margin"
+            android:paddingVertical="5dp"
+            android:gravity="center"
+            android:hint="地址为空，则使用离线识别"
+            android:textColor="#666"
+            android:textSize="@dimen/sp_settings_item_label_text"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@id/title_online_reconize_server"
+            app:layout_constraintLeft_toRightOf="@id/title_online_reconize_server"
+            app:layout_constraintTop_toTopOf="@id/title_online_reconize_server"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tv_online_recognize_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_settings_item_top_margin"
+            android:text=""
+            android:textColor="#0D3"
+            android:textSize="@dimen/sp_settings_comment_text"
+            app:layout_constraintLeft_toLeftOf="@id/title_online_reconize_server"
+            app:layout_constraintTop_toBottomOf="@id/title_online_reconize_server" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green_round"
+            android:onClick="onClick"
+            android:paddingHorizontal="90dp"
+            android:paddingVertical="15dp"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_back"
+            app:layout_constraintTop_toBottomOf="@id/tv_online_recognize_tips" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green_round"
+            android:onClick="onClick"
+            android:paddingHorizontal="90dp"
+            android:paddingVertical="15dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_confirm"
+            app:layout_constraintLeft_toRightOf="@id/btn_confirm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_confirm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

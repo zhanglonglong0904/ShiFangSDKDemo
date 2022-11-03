@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    tools:context="com.shifang.demo.LoginActivity">
+
+    <ImageView
+        android:id="@+id/al_iv_logo_small"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pic_logo_small"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="AI称重"
+        android:textColor="@color/colorThemeContrast"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@+id/al_iv_logo_small"
+        app:layout_constraintLeft_toRightOf="@id/al_iv_logo_small"
+        app:layout_constraintTop_toTopOf="@+id/al_iv_logo_small" />
+
+    <FrameLayout
+        android:id="@+id/fl_btn_settings"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pic_setting_1"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/al_iv_logo_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pic_logo_big"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <LinearLayout
+        android:id="@+id/al_ll_store_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintRight_toRightOf="@id/al_ll_license_no"
+        app:layout_constraintTop_toBottomOf="@id/al_iv_logo_big">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:letterSpacing="0.2"
+            android:text="账号"
+            android:textScaleX="1.1"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/al_et_store_no"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_edit_text_account"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:maxLines="1"
+            android:letterSpacing="0.11"
+            android:cursorVisible="true"
+            android:imeOptions="actionDone"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/al_ll_license_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/al_ll_store_no">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:letterSpacing="0.2"
+            android:text="授权码"
+            android:textScaleX="1.1"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/al_et_license_no"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_edit_text_account"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:maxLines="1"
+            android:letterSpacing="0.11"
+            android:cursorVisible="true"
+            android:imeOptions="actionDone"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/al_ll_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/al_ll_license_no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <Button
+            android:id="@+id/al_btn_login"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_blue_round"
+            android:onClick="onClick"
+            android:text="激活"
+            android:textColor="@color/mr_white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/al_tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:gravity="center"
+        android:text="提示"
+        android:textSize="35sp"
+        android:textColor="@color/red_btn_bg_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

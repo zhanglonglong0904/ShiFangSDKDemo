@@ -1,0 +1,28 @@
+ext {
+    versions = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 21,
+            targetSdkVersion : 26,
+            buildToolsVersion: "26.0.2",
+    ]
+
+    coreDependencies = [
+            gson                    : 'com.google.code.gson:gson:2.8.2',
+            pytorch_android         : 'org.pytorch:pytorch_android:1.12',
+            pytorch_android_torchvision : 'org.pytorch:pytorch_android_torchvision:1.12',
+            retrofit                : 'com.squareup.retrofit2:retrofit:2.1.0',
+            converter_gson          : 'com.squareup.retrofit2:converter-gson:2.1.0',
+            okhttp3                 : 'com.squareup.okhttp3:okhttp:4.3.1',
+            commons_io              : 'commons-io:commons-io:2.0.1',
+            fastjson                : 'com.alibaba:fastjson:1.2.76',
+            aliyun_oss              : 'com.aliyun.dpa:oss-android-sdk:2.9.5',
+    ]
+
+    appDependencies = [
+            rxjava                  : "io.reactivex.rxjava2:rxjava:2.2.3",
+            rxandroid               : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            appcompat               : "androidx.appcompat:appcompat:1.1.0",
+            constraintlayout        : "androidx.constraintlayout:constraintlayout:2.0.4",
+            material_dialogs_core   : "com.afollestad.material-dialogs:core:0.9.6.0",
+    ]
+}
